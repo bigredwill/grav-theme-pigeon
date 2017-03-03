@@ -25,7 +25,7 @@
 		</div>
 		<div class="w-100 fl center bg-piece" style="
 	    {% if im.width > 500 or im.height > 500 %}
-			background-image: url({{im.resize(500,500).url()}});
+			background-image: url({{im.cropResize(500,500).url()}});		      
 			{% else %}
 	    background-image: url({{im.url()}});
 			{% endif %}

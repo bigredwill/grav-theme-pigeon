@@ -9,7 +9,7 @@
 		<div class="one-hundo relative">
 			<div class="stars2 w-100 fl center bg-piece-container">
 				<div class="w-100 fl center bg-piece" style="
-					background-image: url({{page.media[page.header.featuredImage].forceResize(500,500).url()}});
+					background-image: url({{page.media[page.header.featuredImage].cropResize(500,500).url()}});
 				">
 					<div class="dib absolute tagline">
 						<h3 class="dib">{{page.header.tagline}}</h3>
@@ -20,7 +20,7 @@
 		<div class="one-hundo relative">
 			<div class="stars1 w-100 fl center bg-near-black bg-piece-container">
 				<div class="w-100 fl center bg-piece shadow-4" style="
-					background-image: url({{page.media[page.header.headShot].forceResize(500,500).url()}});
+					background-image: url({{page.media[page.header.headShot].cropResize(500,500).url()}});
 				">
 					<div class="dib absolute tagline white">
 						<h3 class="dib">{{page.header.taglineTwo}}</h3>
