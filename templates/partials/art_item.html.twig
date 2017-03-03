@@ -24,6 +24,7 @@
 			</span>
 		</div>
 		<div class="w-100 fl center bg-piece" style="
+			z-index: 14;
 	    {% if im.width > 500 or im.height > 500 %}
 			background-image: url({{im.cropResize(500,500).url()}});		      
 			{% else %}
