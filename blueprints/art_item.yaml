@@ -1,0 +1,51 @@
+title: Art Item
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        item:
+          type: tab
+          title: Art Item
+
+          fields:
+
+            header.title:
+              type: text
+              label: Title
+
+            header.date:
+              type: datetime
+              label: date
+              toggleable: true
+
+            header.taxonomy:
+              type: taxonomy
+              label: PLUGIN_ADMIN.TAXONOMY
+              multiple: true
+              validate:
+                type: array
+
+            header.description:
+              type: textarea
+              label: Description
+
+            header.image:
+              type: pagemediaselect
+              label: Select Image
+              preview_images: true
+
+            header.images:
+              type: pagemedia
+              destination: '@self'
+              label: Upload an image
+
+
+
+            
+

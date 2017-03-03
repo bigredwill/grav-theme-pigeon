@@ -1,0 +1,36 @@
+title: Home
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    home:
+      type: section
+      title: Edit Home Page
+      fields:
+        header.featuredImage:
+          type: pagemediaselect
+          label: Select the featured image (choose its name)
+          preview_images: true
+        header.tagline:
+          type: text
+          label: The text below the featured image
+          default: Brian Weiss Art 2017
+        header.headShot:
+          type: pagemediaselect
+          label: Select your second image (choose its name)
+          preview_images: true
+        header.taglineTwo:
+          type: text
+          label: Text below the second image.
+          default: Take a break. 
+
+        route:
+          type: select
+          label: PLUGIN_ADMIN.PARENT
+          classes: fancy
+          '@data-options': '\Grav\Common\Page\Pages::parents'
+          '@data-default': '\Grav\Plugin\admin::route'
+          options:
+            '/': PLUGIN_ADMIN.DEFAULT_OPTION_ROOT

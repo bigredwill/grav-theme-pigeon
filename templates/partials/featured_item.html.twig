@@ -1,0 +1,18 @@
+<div>
+	<div class="w-100 w-50-ns fl">
+		<h1 class="lh-title mb-2">{{item.title}}</h1>
+		<p class="dim gray lh-copy f6">{{item.header.date|date("Y")}}
+			<span class="dim link gray">
+			{% for c in item.header.taxonomy %}
+				{% for sub in c %}
+					{{sub}}
+				{% endfor %}
+			{% endfor %}
+			</span>
+		</p>
+		<p class="f5 lh-header">{{item.header.description}}</p>
+	</div>
+	<div class="w-100 w-50-ns fl">
+		<img src="{{item.url}}/{{item.header.image}}">
+	</div>
+</div>

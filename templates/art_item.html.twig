@@ -1,0 +1,11 @@
+{% embed 'partials/base.html.twig' %}
+
+	{% block content %}
+		<div class="w-100 dib one-hundo">
+			<div class="w-100 center one-hundo">
+		    {% include 'partials/art_item.html.twig' with {'item':page, 'truncate':false} %}
+	    </div>
+		</div>
+	{% endblock %}
+
+{% endembed %}

@@ -1,0 +1,26 @@
+title: Art
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        home:
+          type: tab
+          title: Edit Art Page
+          fields:
+            header.header:
+              type: text
+              label: Page Title
+              default: Art
+
+            route:
+              type: select
+              label: PLUGIN_ADMIN.PARENT
+              classes: fancy
+              '@data-options': '\Grav\Common\Page\Pages::parents'
+              '@data-default': '\Grav\Plugin\admin::route'
+              options:
+                '/': PLUGIN_ADMIN.DEFAULT_OPTION_ROOT

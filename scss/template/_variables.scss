@@ -1,0 +1,30 @@
+
+
+$font-family-sans-serif: 'Oswald', sans-serif;
+$font-family-serif: 'Playfair Display', serif;
+
+$font-family-base: $font-family-serif;
+$headings-font-family: $font-family-sans-serif;
+
+$text-color: #D0D0D0;
+
+// Media Breakpoints
+$small: 35rem;
+$medium: 55rem;
+$large: 65rem;
+
+// Colors
+
+
+$brand-primary: #89B6A5;
+$color-primary-dark: #0C1319;
+
+$link-color: #89B6A5;
+$link-hover-color: darken($link-color, 15%);
+//** Link hover decoration.
+$link-hover-decoration: underline;
+
+$color-white: #fff;
+$color-gray: #60656F;
+
+$color-text: #131112;

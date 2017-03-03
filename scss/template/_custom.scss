@@ -1,0 +1,60 @@
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+  font-family: Oswald, sans-serif;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  padding-top: 8rem;
+  // background-color: black;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  border-top: 1px solid $brand-primary;
+}
+
+a {
+  
+}
+
+.content {
+  margin-top: 2rem;
+  position: relative;
+}
+
+.home-image {
+  text-align: center;
+  img {
+    height: auto;
+    max-height: 60vh;
+  }
+}
+
+.sub-page-image {
+  img {
+    height: auto;
+    max-height: 50vh;
+  }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+}

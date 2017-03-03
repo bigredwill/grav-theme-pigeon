@@ -1,0 +1,17 @@
+<nav class="nav db dt-ns w-100 border-box mw9 fixed pa2 bg-white center">
+  
+  <div class="db w-75-ns tl-ns near-black">
+    {% set home_link = (page.url() == '/') ? 'underline' : ''%}
+    <a class="dib mid-gray link dim tl-ns mb0-ns v-base {{home_link}}" href="/" title="Home">
+      <span class="b f3 mr3 mr4-ns helvetica">{{ site.title }}</span>
+    </a>
+    {% for page in pages.children %}
+        {% if page.visible %}
+            {% set active_link = (page.active or page.activeChild) ? 'underline' : '' %}            
+            <a class="dib mid-gray link dim tl-ns f5 mr3 mr4-ns helvetica v-base {{active_link}}" href="{{ page.url }}">
+              <span>{{ page.menu }}</span>
+            </a>
+        {% endif %}
+    {% endfor %}
+  </div>
+</nav>

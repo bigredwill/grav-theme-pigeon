@@ -1,0 +1,36 @@
+{% embed 'partials/base.html.twig' %}
+
+	{% set collection = page.collection() %}
+	
+
+	{% block content %}
+		{% set featured_video = page.media.images|first %}
+
+		{% if home_image %}
+			<div class="col-sm-8 col-xs-12 home-image">
+				<img src="{{ home_image.url }}">
+			</div>
+		{% endif %} 
+
+		<!-- <div class="page-header col-sm-8">
+			<div class="col-sm-6">
+				{{ page.content }}
+			</div>
+			 
+		</div> -->
+
+		<div class="home-news-feed col-sm-8 col-xs-12">
+			<h2>{{ header.news_feed_text }}</h2>
+				{% for child in collection %}
+		        {% include 'partials/news_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
+		    {% endfor %}
+
+        {% if config.plugins.pagination.enabled and collection.params.pagination %}
+            {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+        {% endif %}
+		</div>
+
+
+	{% endblock %}
+
+{% endembed %}

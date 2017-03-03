@@ -1,0 +1,16 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+	{% set image = page.media.images|first %}
+	<div class="col-sm-8 col-xs-12 col-sm-offset-2 sub-page-image">
+		{% if image %}
+				<img src="{{ image.url }}">
+		{% endif %}
+
+    {{ page.content }}
+  </div>
+  <div class="news-list col-sm-8 col-xs-12 col-sm-offset-2">
+    {% include "forms/form.html.twig" %}
+  </div>
+
+{% endblock %}

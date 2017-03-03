@@ -1,0 +1,35 @@
+{% for im in item.media.images %}
+{% if ((loop.index%2)==0) %}
+	{% set stars = 'stars1' %}
+  {% set bg = 'bg-black' %}
+  {% set clr = 'white' %}
+{% else %}
+  {% set stars = 'stars2' %}
+  {% set bg = 'bg-white' %}
+  {% set clr = 'near-black' %}
+{% endif %}
+
+<div class="w-100 fl center relative {{stars}} {{bg}} one-hundo">
+	<div class="w-100 mw9 center bg-piece-container">
+		<div class="fl mt4 absolute pl2 pr2 {{clr}}" style="z-index: 15;">
+			<h3 class="dib">{{item.title}}</h3>
+			<span class="dim db link">
+			{% for c in item.header.taxonomy %}
+			{% if loop.first %}
+				{% for sub in c %}
+					{{sub}}
+				{% endfor %}
+			{% endif %}
+			{% endfor %}
+			</span>
+		</div>
+		<div class="w-100 fl center bg-piece" style="
+	    {% if im.width > 500 or im.height > 500 %}
+			background-image: url({{im.resize(500,500).url()}});
+			{% else %}
+	    background-image: url({{im.url()}});
+			{% endif %}
+		"></div>
+	</div>
+</div>
+{% endfor %}

@@ -1,0 +1,26 @@
+{% embed 'partials/base.html.twig' %}
+
+	{% block content %}
+	<div class="w-100 dib pt5 stars2">
+		<div class="w-100 mw9 center">
+		{% for p in page.collection %}
+			{{debug(p)}}
+			<a href="{{p.url}}">
+				<div class="grow fl w-20-l w-third-m w-50 pa2 art-item">
+					<img class="shadow-4" src="{{p.url}}/{{p.header.image}}">
+					<h2 class="f6 dark-gray">{{p.header.title}}</h2>
+					<p clas="f7 ">
+					{% for t in p.taxonomy %}
+					    {% for item in t %}
+					        <span class="gray">{{item}}</span>
+					    {% endfor %}
+					{% endfor %}
+					</p>
+				</div>
+			</a>
+		{% endfor %}
+		</div>
+	</div>
+	{% endblock %}
+
+{% endembed %}
